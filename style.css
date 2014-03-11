@@ -1,21 +1,21 @@
-
+h2 {
+color: #D78B7D;
+}
 .content{
-width: 1000px;
+min-width: 700px;
+max-width: 850px;
 margin: auto;
-background: lightgoldenrodyellow;
+background: #CFC8B5;
 height: 100%;
-padding: 20px;
+padding: 60px;
 }
-
-
 ul, p {
-color: #9d9d9d;
+color: black;
 }
-
 body {
+  background: #62868D;
 width: 100%;
 font-family: 'Kotta One', sans-serif, Helvetica;
-background: #ffb800;
 margin: 0px;
 height: 100%;
 }
@@ -24,6 +24,4 @@ color: black;
 border-bottom: 5px solid;
 }
 
-h2 {
-color: #ffb800;
-}
+
