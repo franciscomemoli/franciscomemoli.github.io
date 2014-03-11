@@ -31,6 +31,7 @@ margin-bottom: 20px;
 h1{
   float: left;
 position: relative;
+text-shadow: 3px 3px 2px #F9F3E3;
 top: 80px;}
 div.foto{
 background-image: url(francisco.jpg);
