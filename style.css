@@ -7,7 +7,7 @@ max-width: 850px;
 margin: auto;
 background: #CFC8B5;
 height: 100%;
-padding: 60px;
+padding: 40px 60px;
 }
 ul, p {
 color: black;
@@ -19,9 +19,31 @@ font-family: 'Kotta One', sans-serif, Helvetica;
 margin: 0px;
 height: 100%;
 }
-h1 {
+.tituloNombre {
 color: black;
 border-bottom: 5px solid;
+display: inline-block;
+width: 100%;
+padding-bottom: 10px;
+margin-bottom: 20px;
 }
 
-
+h1{
+  float: left;
+position: relative;
+top: 35px;}
+div.foto{
+background-image: url(francisco.jpg);
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+box-shadow: 0 1px 2px rgba(0,0,0,.2);
+background-size: 100px 100px;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+display: block;
+margin: 0px 40px;
+height: 100px;
+width: 100px;
+float: right;
+display: block;
+}
