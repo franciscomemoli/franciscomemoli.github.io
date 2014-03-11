@@ -2,7 +2,7 @@
 .content{
 width: 1000px;
 margin: auto;
-background: white;
+background: lightgoldenrodyellow;
 height: 100%;
 padding: 20px;
 }
@@ -14,7 +14,8 @@ color: #9d9d9d;
 
 body {
 width: 100%;
-background: #dddddd;
+font-family: 'Kotta One', sans-serif, Helvetica;
+background: #ffb800;
 margin: 0px;
 height: 100%;
 }
