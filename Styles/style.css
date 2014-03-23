@@ -8,6 +8,9 @@ margin: auto;
 background: #CFC8B5;
 height: 100%;
 padding: 0px 60px;
+-webkit-box-shadow: -7px 0px 17px 0px rgba(53, 53, 53, 0.48);
+-moz-box-shadow:    -7px 0px 17px 0px rgba(53, 53, 53, 0.48);
+box-shadow:         -7px 0px 17px 0px rgba(53, 53, 53, 0.48);
 }
 ul, p {
 color: black;
@@ -38,10 +41,7 @@ width: 500px;
 text-align: center;}
 div.foto{
 background-image: url(../Images/francisco.jpg);
--webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 background-size: 250px 250px;
--webkit-border-radius: 50%;
 -moz-border-radius: 50%;
 border-radius: 50%;
 display: block;
@@ -50,4 +50,7 @@ height: 250px;
 width: 250px;
 float: right;
 display: block;
+-webkit-box-shadow: 0 3px 4px rgba(0,0,0,.2);
+box-shadow: 0 3px 4px rgba(0,0,0,.2);
+-webkit-border-radius: 50%;
 }
