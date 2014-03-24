@@ -8,7 +8,7 @@
      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-  
+  <script src="js/function.js"></script>
   </head>
   <body ng-app='myApp'>
   <div class="content" ng-controller="MyResumeController" >
@@ -148,6 +148,7 @@ app.controller('MyResumeController', function($scope){
 			 							}
 						}	
 		$scope.loadNew = function(){
+			holis()
 			$.getJSON( "json/es.json", function( data ) {
 				console.log(data)
 			  $scope.languaje = data
