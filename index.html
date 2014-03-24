@@ -1,16 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"  >
   <head>
     <title>Mi resumen</title>
     <meta name="author" content="francisco memoli">
     <meta name="keywords" content="francisco memoli olmos developer" />
     <link rel="stylesheet" type="text/css" href="Styles/style.css"></link>
+     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  
   </head>
-  <body>
-  <div class="content">
+  <body ng-app='myApp'>
+  <div class="content" ng-controller="MyResumeController" >
+  	<button style="display:none;" ng-click="loadNew()">load languaje</button>
+
 		  <div class="tituloNombre">
-		  	
 		    <h1>Memoli Olmos Francisco</h1>
 		    <div class="changeLang">
 		  		<a href="myresume-Eng.html">
@@ -20,98 +24,140 @@
 		  </div>
 		  <div class="foto"></div>
 		  <div class="personalData">
-			  <p>Capital Federal, Buenos Aires</p>
-			  <p>Skype user:franmemo</p>
-			  <p>Celular: (011) 155-7059885</p>
-			  <p>eMail: francisco.memoli@gmail.com</p>
-
+			  <p>{{languaje.personalData.address}}</p>
+			  <p>{{languaje.personalData.labelSkypeuser}}: {{languaje.personalData.skypeuser}}</p>
+			  <p>{{languaje.personalData.labelPhone}}: {{languaje.personalData.phone}}</p>
+			  <p>{{languaje.personalData.labelEmail}}: {{languaje.personalData.email}}</p>
 		</div>
-		 <h2>¿Quién soy?</h2> 
-		 <p class="howIm">Hola, mi nombre es Francisco, soy desarrollador de software con más de tres años de experiencia. Eh trabajado en variadas tecnologías y proyectos de forma independiente y relacionado con empresas. Actualmente me dedico principalmente a el desarrollo de paginas web y aplicaciones mobile.</p>
-		  <h2>Historial de trabajo</h2>
-		  
-		  
-		    <h3> Febrero 2012- Presente, P.S.F S.R.L., Capital Federal, Argentina.</h3>
-			  <h4>Investigación y Desarrollo.</h4>
-		      <ul>
-			<li>Desarrollo de sistemas utilizando principalmente conocimientos de PHP, ASP.net, CSS, javascript,jQuery, HTML, entre otros. </li>
-			<li>Analisis de requerimientos y luego programación de tareas a realizar, con la aplicación de metodologias ágiles </li>
-			<li>Mantenimiento y implementacion de nuevos casos de uso en sistemas ya existentes.</li>
-		      </ul>
+		 <h2>{{languaje.howIm.title}}</h2> 
+		 <p class="howIm">{{languaje.howIm.body}}</p>
+		  <h2>{{languaje.works.title}}</h2>
+		  <div ng-repeat="item in languaje.works.items">
+		  	<h3> {{item.title}}</h3>
+			  <h4>{{item.subTitle}}</h4>
+				<ul>
+					<li  ng-repeat="descriptionItem in item.description">{{descriptionItem}} </li>
+				</ul>
+		  </div>			  
+		<h2>{{languaje.education.title}}</h2>
+			  <ul>
+			  		<li ng-repeat="item in languaje.education.items">{{item}}</li>
+			  </ul>
+		<h2>{{languaje.knowledges.title}}</h2>
 		
-
-		    <h3> Diciembre 2010– Febrero 2012, Sistemas Bejerman (Thomson Reuters) , Capital Federal, Argentina.</h3>
-		      <h4>Investigación y Desarrollo.</h4>
-		      <ul>
-			<li>Mantenimiento de productos existentes en el mercado. Solucioonando nuevos
-			errores encontrados y ofreciendo asistencia a clientes.</li>
-			<li>Desarollando nuevas versiones y mejoras personalizadas para clientes.</li>
-			<li>Pruebas de master para nuevas versiones antes de su salida al mercado.</li>
-		      </ul>
-		      
-		      
-		    <h3> Diciembre 2008– Marzo 2009, Westgate Resort & Spa, Park City, UT, EEUU.</h3>
-		    <h4>Mantenimiento.</h4>
-			  <ul>
-			      <li>Realizar reparaciones de todo tipo ya sea dentro o fuera de las habitaciones del hotel. </li>
-			      <li>Mantenimiento y control de piletas. </li>
-			      <li>Realizar inventarios mensuales.  </li>
-			  </ul>
-		    
-		    <h3>Mayo 2007– Septiembre 2007, Inguz Servicios Informáticos, Capital Federal, Argentina.</h3>
-		    <h4>Mantenimiento de hardware.</h4>
-
-			  <ul>
-			      <li>Mantenimiento de computadoras y redes en empresas.</li>
-			      <li>Armado y reparación  de computadoras y redes.</li>
-			  </ul>
-			  
-		<h2>Educación</h2>
-			  <ul>
-			      <li>2006– Actual Ingeniería Informática en la Universidad de Buenos Aires, Capital Federal.</li>
-			      <li>2003– 2005 Bachiller y Técnico de Nivel Medio en Electrónica Industrial, Instituto Técnico Salesiano Villada ,Córdoba Capital.</li>
-			  </ul>
-		<h2>  Conocimientos </h2>
-		<h3>Manejo de lenguajes de programación:  </h3>
-		  <h4>Conocimientos intermedios</h4>
-			  <ul>
-			      
-			      <li>Pascal</li>
-			      <li>C</li>
-			      <li>C++</li>
-			      <li>HTML5</li>
-			      <li>facebook API</li>
-			      <li>Java</li>
-			      <li>Java for Android</li>
-			      <li>Access</li>
-			      </ul>
-		<h4>Conocimientos avanzados</h4>
-			    <ul>
-			      <li>Visual Basic 6</li>
-			      <li>Visual .Net </li>
-			      <li>SQL server</li>
-			      <li>PHP</li>
-			      <li>JavaScript</li>
-			      <li>JQuery</li>
-			      <li>AJAX</li>
-			      <li>HTML</li>
-			      <li>CSS</li>
-			      <li>Mustage</li>
-			      <li>ASP.net</li>
-			      <li>svn</li>
-			      <li>Git</li>
-			      <li>Comprensión de UML</li>
-			  </ul>
-		<h3>Frameworks:  </h3>
-			  <ul>
-			      <li>zend</li>
-			      <li>cakephp</li>
-			      <li>Angular</li>
-			  </ul>
-		<h3>Idimoma:  </h3>
-		<p>Ingles nivel intermedio: Instituto Técnico Salesiano Villada e Instituto Universitario de Lenguas Modernas.</p>
+		<div ng-repeat="knowledge in languaje.knowledges.items ">
+			<h3>{{knowledge.subTitle}}:  </h3>
+			<div ng-repeat="item in knowledge.level">
+				<h4>{{item.subTitle}}</h4>
+				  <ul>
+				      <li  ng-repeat="know in item.items">{{know}}</li>
+				   </ul>
+			</div>
+		</div>
+		
     </div>
-	  
+	  <script type="text/javascript">
+var app=angular.module('myApp', []);
+app.controller('MyResumeController', function($scope){
+		$scope.languaje	= {personalData:{
+										address:"Capital Federal, Buenos Aires",
+			 							labelSkypeuser:"Skype user",skypeuser:"franmemo", 
+			 							labelPhone:"Celular",phone: "(011) 155-7059885", 
+			 							labelEmail:"eMail",email: "francisco.memoli@gmail.com"},
+			 				howIm:{title:"¿Quién soy?",
+			 						body:"Hola, mi nombre es Francisco, soy desarrollador de software con más de tres años de experiencia. Eh trabajado en variadas tecnologías y proyectos de forma independiente y relacionado con empresas. Actualmente me dedico principalmente a el desarrollo de paginas web y aplicaciones mobile."},
+			 				works:{title:"Historial de trabajo",
+			 						items:[{
+			 									title:"Febrero 2012- Presente, P.S.F S.R.L., Capital Federal, Argentina.",
+			 									subTitle:"Investigación y Desarrollo.",
+			 									description:["Desarrollo de sistemas utilizando principalmente conocimientos de PHP, ASP.net, CSS, javascript,jQuery, HTML, entre otros.",
+			 												"Analisis de requerimientos y luego programación de tareas a realizar, con la aplicación de metodologias ágiles ",
+			 												"Mantenimiento y implementacion de nuevos casos de uso en sistemas ya existentes."]
+			 								},
+			 								{
+			 									title:"Diciembre 2010– Febrero 2012, Sistemas Bejerman (Thomson Reuters) , Capital Federal, Argentina.",
+			 									subTitle:"Investigación y Desarrollo.",
+			 									description:["Mantenimiento de productos existentes en el mercado. Solucionando nuevos errores encontrados y ofreciendo asistencia a clientes.",
+															"Desarollando nuevas versiones y mejoras personalizadas para clientes.",
+															"Pruebas de master para nuevas versiones antes de su salida al mercado."]
+			 								},
+			 								{
+			 									title:"Diciembre 2008– Marzo 2009, Westgate Resort & Spa, Park City, UT, EEUU.",
+			 									subTitle:"Mantenimiento.",
+			 									description:["Realizar reparaciones de todo tipo ya sea dentro o fuera de las habitaciones del hotel.",
+			 												 "Mantenimiento y control de piletas.",
+			 												 "Realizar inventarios mensuales.  ",]
+			 								},
+			 								{
+			 									title:"Mayo 2007– Septiembre 2007, Inguz Servicios Informáticos, Capital Federal, Argentina.",
+			 									subTitle:"Mantenimiento de hardware.",
+			 									description:["Mantenimiento de computadoras y redes en empresas.",
+			 												 "Armado y reparación  de computadoras y redes."]
+			 								}
+			 							]},
+			 				education:{title:"Educación",
+			 						   items:[	"2006– Actual Ingeniería Informática en la Universidad de Buenos Aires, Capital Federal.",
+			      								"2003– 2005 Bachiller y Técnico de Nivel Medio en Electrónica Industrial, Instituto Técnico Salesiano Villada ,Córdoba Capital."
+			 								]
+			 						 },
+			 				knowledges:{title:"Conocimientos",
+			 							items:[{	
+					 							subTitle:"Manejo de lenguajes de programación",
+					 							level:[{subTitle:"Conocimientos intermedios",
+					 										items: ["Pascal",
+																	"C",
+																	"C++",
+																	"HTML5",
+																	"facebook API",
+																	"Java",
+																	"Java for Android",
+																	"Access"
+																  ]
+					 								 },{subTitle:"Conocimientos avanzados",
+					 										items: ["Visual Basic 6",
+																	"Visual .Net",
+																	"SQL server",
+																	"PHP",
+																	"JavaScript",
+																	"JQuery",
+																	"AJAX",
+																	"HTML",
+																	"CSS",
+																	"Mustage",
+																	"ASP.net",
+																	"svn",
+																	"Git",
+																	"Comprensión de UML"
+																  ]
+					 								 }]
+					 							},{
+					 								subTitle:"Frameworks",
+						 							level:[{subTitle:"",
+						 										items: ["zend",
+																		"cakephp",
+																		"Angular"
+																	  ]
+						 								 }]
+					 							},{
+					 								subTitle:"Idimoma",
+						 							level:[{subTitle:"",
+						 										items: ["Ingles nivel intermedio: Instituto Técnico Salesiano Villada e Instituto Universitario de Lenguas Modernas."]
+						 								 }]
+					 							}
+					 						]
+			 							}
+						}	
+		$scope.loadNew = function(){
+			$.getJSON( "json/es.json", function( data ) {
+				console.log(data)
+			  $scope.languaje = data
+			 });	
+		}
+		
+})
+
+
+	  </script>
   </body>
 </html>
 
