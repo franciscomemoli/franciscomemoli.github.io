@@ -1,3 +1,3 @@
-holis(){
+function holis(){
 	alert('asd')
 }
