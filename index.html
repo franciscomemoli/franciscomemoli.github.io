@@ -8,7 +8,8 @@
       <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-  	<script src="JS/funciton.js"></script>
+  	
+  
   </head>
   <body ng-app='myResume'>
   <div class="content" ng-controller="MyResumeController" >
@@ -244,8 +245,6 @@
 			$scope.languaje = english
 		}
 		$scope.loadNew = function(){
-			
-			holis()
 			if($scope.languaje.name == "english"){
 				$scope.languaje = spanish
 			}else{
