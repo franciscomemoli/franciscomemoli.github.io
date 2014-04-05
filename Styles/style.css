@@ -57,3 +57,6 @@ box-shadow: 0 3px 4px rgba(0,0,0,.2);
 .howIm {width: 520px;}
 ul{list-style-image: url('../Images/bullet5.png');
 }
+.changeLang a {
+    cursor: pointer;
+}
