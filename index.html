@@ -32,7 +32,7 @@
 		 <p class="howIm">{{languaje.howIm.body}}</p>
 		  <h2>{{languaje.works.title}}</h2>
 		  <div ng-repeat="item in languaje.works.items">
-		  	<h3 ng-bind-html="{{item.title}}"> </h3>
+		  	<h3> {{item.title}}</h3>
 			  <h4>{{item.subTitle}}</h4>
 				<ul>
 					<li  ng-repeat="descriptionItem in item.description">{{descriptionItem}} </li>
@@ -69,14 +69,14 @@
 		 						body:"Hello! My name is Francisco , I am a software developer with over three years of experience . I worked in many technologies and projects like freelancer and as an employee of corporations. Currently I am dedicated primarily to developing websites and mobile applications, always trying to work with the latest technology."},
 		 				works:{title:" Work History",
 		 						items:[{
-		 									title:"July 2014 - Present, <a href='flowcode.com.ar'>Flowcode</a>, Capital Federal, Argentina.",
+		 									title:"July 2014 - Present, Flowcode, Capital Federal, Argentina.",
 		 									subTitle:"Manager and developer.",
 		 									description:["Web development systems with different technologies, mostly using PHP and symfony AngularJS for the front-end.",
 		 												"Requirements analysis, project estimation and assembly of budgets.",
 														"Negotiation with customers.",
 														"Conducted projects."]
 		 								},{
-		 									title:"February 2012 - July 2014 , <a href='http://prosoftwarefactory.com.ar/'> P.S.F S.R.L.</a>, Capital Federal, Argentina . ",
+		 									title:"February 2012 - July 2014 , P.S.F S.R.L., Capital Federal, Argentina . ",
 		 									subTitle:"Deleveper.",
 		 									description:["Develop software using mainly knowledges like  PHP, ASP.net , CSS , JavaScript , jQuery , HTML, and others.",
 		 												"Analysis of requirements and then scheduling tasks, with the application of agile methodologies like scrum.",
@@ -156,7 +156,7 @@
 		 						body:"Hola! Mi nombre es Francisco, soy desarrollador de software con más de tres años de experiencia. He trabajado en variadas tecnologías y proyectos de forma independiente y relacionado con empresas. Actualmente me dedico principalmente a el desarrollo de paginas web y aplicaciones mobile."},
 		 				works:{title:"Historial de trabajo",
 		 						items:[{
-		 									title:"Julio 2014 - Presete, <a href='flowcode.com.ar'>Flowcode</a>, Capital Federal, Argentina.",
+		 									title:"Julio 2014 - Presete, Flowcode, Capital Federal, Argentina.",
 		 									subTitle:"Investigación y Desarrollo.",
 		 									description:["Desarrollo de sistemas principalmente webs con diversas tecnologías, mayormente PHP utilizando symfony y acomañados con angularjs para el front-end.",
 		 												"Analisis de requerimientos, estimación de proyectos y armado de presupuestos.",
@@ -164,7 +164,7 @@
 		 												"Llevado a cabo de los proyectos."]
 		 								},
 		 								{
-		 									title:"Febrero 2012- Julio 2014, \"<a href='http://prosoftwarefactory.com.ar/'> \"P.S.F S.R.L.\"</a>\", Capital Federal, Argentina.",
+		 									title:"Febrero 2012- Julio 2014, P.S.F S.R.L., Capital Federal, Argentina.",
 		 									subTitle:"Investigación y Desarrollo.",
 		 									description:["Desarrollo de sistemas utilizando principalmente conocimientos de PHP, ASP.net, CSS, javascript,jQuery, HTML, entre otros.",
 		 												"Analisis de requerimientos y luego programación de tareas a realizar, con la aplicación de metodologias ágiles ",
