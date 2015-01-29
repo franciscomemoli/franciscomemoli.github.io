@@ -32,7 +32,7 @@
 		 <p class="howIm">{{languaje.howIm.body}}</p>
 		  <h2>{{languaje.works.title}}</h2>
 		  <div ng-repeat="item in languaje.works.items">
-		  	<h3> {{item.title}}</h3>
+		  	<h3 ng-bind-html="{{item.title}}"> </h3>
 			  <h4>{{item.subTitle}}</h4>
 				<ul>
 					<li  ng-repeat="descriptionItem in item.description">{{descriptionItem}} </li>
